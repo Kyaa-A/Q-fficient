@@ -1,4 +1,5 @@
 import { AdsSlider } from './components/AdsSlider';
+import { FaUsers, FaClock } from "react-icons/fa"; // Import queue and time icons
 
 function App() {
   return (
@@ -8,23 +9,22 @@ function App() {
         <AdsSlider />
       </div>
 
-      {/* User Position Section */}
-      <div className="flex-1 flex items-center justify-center bg-white p-4">
-        <div className="text-center">
-          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold">
-            User Position
-          </h2>
-          <p className="text-sm sm:text-base md:text-lg">123 Example Street</p>
+      {/* Position in Queue Section - Updated */}
+      <div className="min-h-[20vh] flex items-center justify-center bg-white p-6">
+        <div className="text-center bg-gray-50 shadow-md rounded-lg p-6 w-11/12 max-w-md">
+          <FaUsers className="text-blue-500 text-4xl mx-auto mb-2" />
+          <h2 className="text-2xl font-bold text-gray-800">Your Queue Position</h2>
+          <p className="text-lg text-gray-600">👥 You are <span className="font-semibold text-gray-700">3rd</span> in line.</p>
+          <p className="text-sm text-gray-500 mt-1">Please wait until it's your turn.</p>
         </div>
       </div>
 
-      {/* Estimated Range Time Section */}
-      <div className="w-full p-4 bg-gray-100">
-        <div className="text-center">
-          <h2 className="text-lg sm:text-xl md:text-2xl font-semibold">
-            Estimated Range Time
-          </h2>
-          <p className="text-sm sm:text-base md:text-lg">15-20 minutes</p>
+      {/* Estimated Wait Time Section */}
+      <div className="w-full p-6 bg-gray-100 flex justify-center">
+        <div className="text-center bg-white shadow-md rounded-lg p-6 w-11/12 max-w-md">
+          <FaClock className="text-orange-500 text-4xl mx-auto mb-2" />
+          <h2 className="text-2xl font-semibold text-gray-800">Estimated Wait Time</h2>
+          <p className="text-lg text-gray-600">⏳ 10-20 minutes</p>
         </div>
       </div>
     </div>
